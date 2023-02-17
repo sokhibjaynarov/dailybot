@@ -57,7 +57,7 @@ async def callback_minute(context: CallbackContext) -> None:
 
 
 async def set_timer(update: Update, context: CallbackContext) -> None:
-    due = 3
+    due = 86400
     context.job_queue.run_repeating(callback_minute, due)
 
 
